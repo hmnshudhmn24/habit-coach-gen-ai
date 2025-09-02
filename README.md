@@ -8,7 +8,7 @@ An interactive habit coach that can:
 
 This is a **prototype** combining a lightweight image classifier + nutrition heuristics + LLM coaching. The goal is a usable, local-first demo you can extend.
 
----
+
 
 ## ✨ Features
 
@@ -18,7 +18,7 @@ This is a **prototype** combining a lightweight image classifier + nutrition heu
 - Chat coach powered by OpenAI (requires `OPENAI_API_KEY`)  
 - Everything stored in a local SQLite DB (`./data/habits.db`)
 
----
+
 
 ## 🧰 Tech stack
 
@@ -28,7 +28,7 @@ This is a **prototype** combining a lightweight image classifier + nutrition heu
 - SQLite (SQLAlchemy) for persistence  
 - Python with small helper modules for nutrition & DB
 
----
+
 
 ## ⚙️ Installation
 
@@ -58,7 +58,7 @@ streamlit run streamlit_app.py
 
 Open the Streamlit URL (usually `http://localhost:8501`).
 
----
+
 
 ## 🧭 How it works (overview)
 
@@ -70,7 +70,7 @@ Open the Streamlit URL (usually `http://localhost:8501`).
 
 4. **LLM coach** — chat interface sends messages to OpenAI ChatCompletion API with a "supportive coach" system prompt. The coach provides motivational, actionable responses.
 
----
+
 
 ## ✅ Caveats & limitations
 
@@ -79,7 +79,7 @@ Open the Streamlit URL (usually `http://localhost:8501`).
 - **OpenAI usage**: Chat calls go to OpenAI and incur costs. Do not send PII.
 - **Portion estimation**: the app assumes user-input grams; automatic portion size estimation from an image is a separate advanced task (requires depth/size reference).
 
----
+
 
 ## 🔮 Next steps / improvements
 
@@ -89,7 +89,7 @@ Open the Streamlit URL (usually `http://localhost:8501`).
 - Personalization: user profiles, daily calorie goals, streaks & reminders
 - Offline LLMs for coaching (if privacy is required)
 
----
+
 
 ## 🔒 Privacy & ethics
 
@@ -97,15 +97,3 @@ Open the Streamlit URL (usually `http://localhost:8501`).
 - Be transparent: this is a *coaching* tool, not a medical or nutritionist substitute.
 - Respect user privacy and do not send sensitive images or data to third-party APIs unless consented.
 
----
-
-## 🧩 License
-
-MIT — feel free to use and adapt for demos and prototypes.
-
----
-
-If you want, I can:
-- package this project into a downloadable ZIP,
-- add a Dockerfile (CPU-only) for reproducible installs, or
-- swap the image classifier for a CLIP zero-shot implementation / Food101 model.
